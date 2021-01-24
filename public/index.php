@@ -1,7 +1,5 @@
 <?php declare(strict_types=1);
 
-require __DIR__ . '/../vendor/autoload.php';
-
-$app = new \App\Framework\Application();
+$app = require __DIR__ . '/../bootstrap.php';
 
 echo $app->run();

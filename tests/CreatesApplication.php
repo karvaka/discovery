@@ -10,9 +10,7 @@ trait CreatesApplication
 
     public function createApplication(): Application
     {
-        require __DIR__ . '/../vendor/autoload.php';
-
-        return new Application();
+        return require __DIR__ . '/../bootstrap.php';
     }
 
     public function setUpApplication(): void
