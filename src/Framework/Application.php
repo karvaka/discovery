@@ -6,12 +6,8 @@ use Dotenv\Dotenv;
 
 class Application extends Container
 {
-    private string $basePath;
-
-    public function __construct(string $basePath)
+    public function __construct(private string $basePath)
     {
-        $this->basePath = $basePath;
-
         $this->loadEnvironmentVariables();
     }
 
@@ -19,6 +15,11 @@ class Application extends Container
     {
         $dotenv = Dotenv::createImmutable($this->basePath);
         $dotenv->safeLoad();
+    }
+
+    public function getBasePath(): string
+    {
+        return $this->basePath;
     }
 
     public function run()

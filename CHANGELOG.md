@@ -7,3 +7,4 @@
 - Added .env support
 - Added simple IOC Container
 - Added PDO Service
+- Added Flysystem Service

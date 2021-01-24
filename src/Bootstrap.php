@@ -3,7 +3,11 @@
 namespace App;
 
 use App\Framework\Application;
-use App\Providers\DatabaseProvider;
+use App\Providers\{
+    DatabaseProvider,
+    FilesystemProvider,
+    RoutingProvider
+};
 
 final class Bootstrap
 {
@@ -19,5 +23,7 @@ final class Bootstrap
     private function registerServices(Application $app): void
     {
         (new DatabaseProvider($app))->register();
+        (new FilesystemProvider($app))->register();
+        (new RoutingProvider($app))->register();
     }
 }
