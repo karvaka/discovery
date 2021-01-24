@@ -4,7 +4,7 @@ namespace App\Framework;
 
 use Dotenv\Dotenv;
 
-class Application
+class Application extends Container
 {
     private string $basePath;
 

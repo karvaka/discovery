@@ -2,4 +2,4 @@
 
 require './vendor/autoload.php';
 
-return new \App\Framework\Application(__DIR__);
+return (new \App\Bootstrap())->createApplication();
