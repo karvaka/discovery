@@ -6,6 +6,6 @@ class Dashboard extends Controller
 {
     public function show()
     {
-        return $this->render('dashboard');
+        return $this->render('dashboard', layout: 'layouts/app');
     }
 }

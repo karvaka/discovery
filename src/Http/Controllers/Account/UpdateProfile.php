@@ -8,7 +8,7 @@ class UpdateProfile extends Controller
 {
     public function showForm()
     {
-        return $this->render('account/profile-form');
+        return $this->render('account/profile-form', layout: 'layouts/app');
     }
 
     public function update()

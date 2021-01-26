@@ -8,6 +8,6 @@ class ManageAccessTokens extends Controller
 {
     public function index()
     {
-        return $this->render('account/access');
+        return $this->render('account/access-tokens-list', layout: 'layouts/app');
     }
 }
